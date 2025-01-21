@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_mux_row_or_digit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "o_mux_row_or_digit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "o_n_col_0_or_7segm_a",
+					"strict" : false
+				},
+				{
+					"name" : "o_n_col_1_or_7segm_b",
+					"strict" : false
+				},
+				{
+					"name" : "o_n_col_2_or_7segm_c",
+					"strict" : false
+				},
+				{
+					"name" : "o_n_col_3_or_7segm_d",
+					"strict" : false
+				},
+				{
+					"name" : "o_n_col_4_or_7segm_e",
+					"strict" : false
+				},
+				{
+					"name" : "o_n_col_5_or_7segm_f",
+					"strict" : false
+				},
+				{
+					"name" : "o_n_col_6_or_7segm_g",
+					"strict" : false
+				},
+				{
+					"name" : "o_n_col_7_or_7segm_dp",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

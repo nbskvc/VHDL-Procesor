@@ -1,0 +1,7 @@
+
+State Machine - |top|lprs_processor:processor|control_unit:control_unit|state
+Name state.WB state.EX state.ID state.Fetch 
+state.Fetch 0 0 0 0 
+state.ID 0 0 1 1 
+state.EX 0 1 0 1 
+state.WB 1 0 0 1 

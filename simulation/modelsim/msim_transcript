@@ -1,0 +1,211 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do procesor_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:14 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ALU
+# -- Compiling architecture Behavioral of ALU
+# End time: 15:53:14 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:14 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity control_unit
+# -- Compiling architecture Behavioral of control_unit
+# End time: 15:53:14 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:14 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity counter
+# -- Compiling architecture Behavioral of counter
+# End time: 15:53:14 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/decoder3to8.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:14 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/decoder3to8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder3to8
+# -- Compiling architecture Behavioral of decoder3to8
+# End time: 15:53:15 on Jan 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:15 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity memory
+# -- Compiling architecture SYN of memory
+# End time: 15:53:15 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/multiplexer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:15 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/multiplexer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexer
+# -- Compiling architecture Behavioral of multiplexer
+# End time: 15:53:15 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/nbit_register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:15 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/nbit_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity nbit_register
+# -- Compiling architecture Behavioral of nbit_register
+# End time: 15:53:15 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/program_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:15 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/program_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity program_counter
+# -- Compiling architecture Behavioral of program_counter
+# End time: 15:53:15 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:15 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity lprs_processor
+# -- Compiling architecture Behavioral of lprs_processor
+# -- Loading entity nbit_register
+# -- Loading entity control_unit
+# -- Loading entity decoder3to8
+# -- Loading entity ALU
+# -- Loading entity multiplexer
+# -- Loading entity program_counter
+# End time: 15:53:15 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/top.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:15 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity top
+# -- Compiling architecture Behavioral of top
+# -- Loading package altera_mf_components
+# -- Loading entity memory
+# -- Loading entity lprs_processor
+# -- Loading package NUMERIC_STD
+# -- Loading entity counter
+# End time: 15:53:15 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Korisnik/Desktop/lprs_procesor_v2/top_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:53:16 on Jan 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/Korisnik/Desktop/lprs_procesor_v2/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity top_tb
+# -- Compiling architecture Behavioral of top_tb
+# End time: 15:53:16 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  top_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" top_tb 
+# Start time: 15:53:16 on Jan 21,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_mf_components
+# Loading ieee.numeric_std(body)
+# Loading work.top(behavioral)
+# Loading work.memory(syn)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.lprs_processor(behavioral)
+# Loading work.nbit_register(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.decoder3to8(behavioral)
+# Loading work.alu(behavioral)
+# Loading work.multiplexer(behavioral)
+# Loading work.program_counter(behavioral)
+# Loading work.counter(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut
+add wave -position insertpoint  \
+sim:/top_tb/uut/s_bus
+# End time: 15:54:01 on Jan 21,2025, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 7
