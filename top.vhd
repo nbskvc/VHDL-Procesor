@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
+
 library work;
 
 entity top is
@@ -14,8 +15,7 @@ entity top is
         clk  : in  std_logic; 
         rst  : in  std_logic;
 		  --i_data : in std_logic_vector(15 downto 0);
-		  --i_run : in std_logic;
-		  --o_bus : out std_logic_vector(15 downto 0);
+		  i_run : in std_logic;
 		  
 			--max1000
 			i_sw : in std_logic_vector(7 downto 0);
@@ -78,7 +78,7 @@ port map(
 	clk => clk,        
   rst => rst,          
   i_inst => s_inst,
-  --i_run => i_run,
+  i_run => i_run,
   i_data => s_data,
   o_bus => s_bus,
   o_pc => s_address,
@@ -98,27 +98,16 @@ select_digit: entity work.counter
 		rst => rst,
 		ocnt => s_cnt
 	);
-
---select_digit: entity work.counter  --simulacija
---	generic map(
---		module => 20,
---		bits => 5
---	)
---	port map(
---		clk => clk,
---		rst => rst,
---		ocnt => s_cnt
---	);
 	
 --s_data(7 downto 0) <= i_sw;
 --s_data(15 downto 8) <= i_sw;
 
 s_data <= x"0003";
 
-digit_1 <= s_bus(3 downto 0);
-digit_2 <= s_bus(7 downto 4); 
-digit_3 <= s_bus(11 downto 8);
-digit_4 <= s_bus(15 downto 12);
+digit_1 <= sreg(3 downto 0);
+digit_2 <= sreg(7 downto 4); 
+digit_3 <= sreg(11 downto 8);
+digit_4 <= sreg(15 downto 12);
 
 
 digit <= digit_1  when mux_row_or_digit = "000" else
@@ -246,17 +235,12 @@ segm(7) <= segm_dp;
 
 
 mux_sel_color_or_7segm <= "11"; -- select 7segm
---mux_row_or_digit <= "000"; --select 1st digit
 
 mux_row_or_digit <= "000" when s_cnt < (CLK_FREQ/1000)/4 else
 						 "001" when s_cnt < (CLK_FREQ/1000)/2 else
 						 "010" when s_cnt < 3*(CLK_FREQ/1000)/4 else
 						 "011";
---
---mux_row_or_digit <= "000" when s_cnt < 5 else --sim
---						 "001" when s_cnt < 10 else
---						 "010" when s_cnt < 15 else
---						 "011";
+
 
 mux_color_or_7segm <= segm;
 n_mux_color_or_7segm <= not mux_color_or_7segm;

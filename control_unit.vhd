@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity control_unit is
     Port ( clk     : in  STD_LOGIC;
            rst   : in  STD_LOGIC;
-           --i_run : in STD_LOGIC;
+           i_run : in STD_LOGIC;
 			  i_inst : in STD_LOGIC_VECTOR(9 downto 0);
 			  o_reg_sel : out STD_LOGIC_VECTOR(2 downto 0);
 			  o_reg_in : out STD_LOGIC_VECTOR(2 downto 0);
@@ -17,7 +17,9 @@ entity control_unit is
 			  o_g_sel : out STD_LOGIC;
 			  o_data_sel : out STD_LOGIC;
 			  o_pc_clear : out STD_LOGIC;
-			  o_pc_en : out STD_LOGIC);
+			  o_pc_en : out STD_LOGIC;
+			  o_jmp_val : out std_logic_vector(5 downto 0)
+			  );
 end control_unit;
 
 architecture Behavioral of control_unit is
@@ -32,11 +34,9 @@ begin
 		if(rst = '0') then
 			state <= Fetch;
 		elsif rising_edge(clk) then
-			--if(i_run = '1') then
-				state <= next_state;
-			--else
-			--	state <= state;
-			--end if;
+			state <= next_state;
+		else
+			state <= state;
 		end if;
 	end process;
 	
@@ -51,11 +51,19 @@ begin
 			  o_pc_en <= '0';	
 			  o_reg_sel <= "000";
 			  o_alu_sel <= "0000";
+			  o_jmp_val <= "000000";
 			  test <= "0000";
 		case(state) is
 			when Fetch=>
-				next_state <= ID;
-				o_pc_en <= '1';
+				if(i_run = '1')then	
+					next_state <= ID;
+					o_pc_en <= '1';
+					if(i_inst(9 downto 6) = "0100")then  --jmp
+						o_jmp_val <= i_inst(5 downto 0);
+					end if;
+				else
+					next_state <= Fetch;
+				end if;
 			when ID =>
 				if(i_inst(9 downto 6) = "0000")then --mv
 					test <= "0001";
@@ -76,25 +84,22 @@ begin
 				test <= "0111";
 					o_reg_sel <= i_inst(5 downto 3);
 					o_acc_we <= '1';
-					--o_alu_sel <= opcode;
+				elsif(i_inst(9 downto 6) = "0100")then
+					
 				end if;
 				next_state <= EX;
 			when EX =>
 				if(i_inst(9 downto 6) = "0000")then --mv
-					--o_pc_en <= '1';
 					test <= "0000";
 				elsif(i_inst(9 downto 6) = "0001")then --mvi
 					o_data_sel <= '1';
 					test <= "0001";
-					--o_pc_en <= '1';
 				elsif(i_inst(9 downto 6) = "0010")then --add
-					--o_pc_en <= '1';
 					test <= "0010";
 					o_result_we <= '1';
 					o_reg_sel <= i_inst(2 downto 0); --ry out
 					o_alu_sel <= "0010"; --select add
 				elsif(i_inst(9 downto 6) = "0011")then --sub
-					--o_pc_en <= '1';
 					o_result_we <= '1';
 					o_reg_sel <= i_inst(2 downto 0);
 					o_alu_sel <= "0011";
@@ -104,15 +109,15 @@ begin
 				end if;
 				next_state <= WB;
 			when WB =>
-				if(i_inst(9 downto 6) = "0000")then
+				if(i_inst(9 downto 6) = "0000")then --mv
 					o_reg_sel <= i_inst(5 downto 3);
-				elsif(i_inst(9 downto 6) = "0001")then
+				elsif(i_inst(9 downto 6) = "0001")then --mvi
 					o_reg_sel <= i_inst(5 downto 3);
 				elsif(i_inst(9 downto 6) = "0010")then --add
 					o_reg_in <= i_inst(5 downto 3);
 					o_reg_en <= '1';
 					o_g_sel <= '1';
-				elsif(i_inst(9 downto 6) = "0011")then
+				elsif(i_inst(9 downto 6) = "0011")then --sub
 					o_reg_in <= i_inst(5 downto 3);
 					o_reg_en <= '1';
 					o_g_sel <= '1';

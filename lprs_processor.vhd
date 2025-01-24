@@ -8,7 +8,7 @@ entity lprs_processor is
         clk         : in  std_logic;                 
         rst       : in  std_logic;                 
         i_inst : in std_logic_vector(9 downto 0);
-		  --i_run : in std_logic;
+		  i_run : in std_logic;
 		  i_data : in std_logic_vector(15 downto 0);
 		  o_bus : out std_logic_vector(15 downto 0);
 		  o_pc : out std_logic_vector(15 downto 0);
@@ -34,6 +34,7 @@ signal s_result_we :  STD_LOGIC;
 signal s_alu_sel : STD_LOGIC_VECTOR(3 downto 0);
 signal s_g_sel : STD_LOGIC;
 signal s_data_sel : STD_LOGIC;
+signal s_jmp_val : std_logic_vector(5 downto 0);
 --program counter
 signal s_pc_clear : std_logic;
 signal s_pc_en : std_logic;
@@ -172,7 +173,7 @@ control_unit: entity work.control_unit
 	port map(
 			  clk  => clk,
            rst => rst,
-           --i_run => i_run,
+           i_run => i_run,
 			  i_inst => s_inst,
 			  o_reg_sel => s_reg_sel,
 			  o_reg_in => s_reg_in,
@@ -183,7 +184,8 @@ control_unit: entity work.control_unit
 			  o_g_sel => s_g_sel,
 			  o_data_sel => s_data_sel,
 			  o_pc_clear => s_pc_clear,
-			  o_pc_en => s_pc_en
+			  o_pc_en => s_pc_en,
+			  o_jmp_val => s_jmp_val
 	);
 decoder: entity work.decoder3to8
 	port map(
@@ -222,7 +224,8 @@ pc: entity work.program_counter
 	  rst   => rst,
 	  o_pc  => s_pc,
 	  i_pc_clear => s_pc_clear,
-	  i_pc_en => s_pc_en
+	  i_pc_en => s_pc_en,
+	  i_jmp_val => s_jmp_val
 	);
 
 	o_bus <= s_bus;

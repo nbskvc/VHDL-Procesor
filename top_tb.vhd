@@ -15,7 +15,7 @@ architecture Behavioral of top_tb is
         port (
             clk                          : in  std_logic;
             rst                          : in  std_logic;
-            --i_run                        : in  std_logic;
+            i_run                        : in  std_logic;
             i_sw                         : in  std_logic_vector(7 downto 0);
             o_mux_row_or_digit           : out std_logic_vector(2 downto 0);
             o_mux_sel_color_or_7segm     : out std_logic_vector(1 downto 0);
@@ -33,7 +33,7 @@ architecture Behavioral of top_tb is
     -- Signals to connect to DUT
     signal clk                  : std_logic := '0';
     signal rst                  : std_logic := '0';
-    --signal i_run                : std_logic := '0';
+    signal i_run                : std_logic := '0';
     signal i_sw                 : std_logic_vector(7 downto 0) := (others => '0');
     signal o_mux_row_or_digit   : std_logic_vector(2 downto 0);
     signal o_mux_sel_color_or_7segm : std_logic_vector(1 downto 0);
@@ -59,7 +59,7 @@ begin
         port map (
             clk => clk,
             rst => rst,
-            --i_run => i_run,
+            i_run => i_run,
             i_sw => i_sw,
             o_mux_row_or_digit => o_mux_row_or_digit,
             o_mux_sel_color_or_7segm => o_mux_sel_color_or_7segm,
@@ -93,12 +93,17 @@ begin
         rst <= '1';
 
         -- Test case 1: Set inputs and observe outputs
-        --i_run <= '1';
-        wait for 100 ns;
+        i_run <= '1';
+        wait for CLK_PERIOD*30;
 
         -- Test case 2: Change inputs and observe outputs
         wait for 100 ns;
-
+		  
+			i_run <= '0';
+        wait for 100 ns;
+		  
+		  i_run <= '1';
+        wait for 100 ns;
         -- Add more test cases as needed
         wait;
     end process;

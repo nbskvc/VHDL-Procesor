@@ -26,7 +26,7 @@
  -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
- --                  Bank 1A:       2.5V
+ --                  Bank 1A:       3.3V
  --                  Bank 1B:       2.5V
  --                  Bank 2:       3.3V
  --                  Bank 3:       2.5V
@@ -94,7 +94,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C1        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1A        :                
+i_run                        : C2        : input  : 3.3 V Schmitt Trigger :         : 1A        : Y              
 GND                          : C3        : gnd    :                   :         :           :                
 ~ALTERA_nSTATUS~ / RESERVED_INPUT : C4        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
 ~ALTERA_CONF_DONE~ / RESERVED_INPUT : C5        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
@@ -133,7 +133,7 @@ GND                          : E11       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1A        :                
-VCCIO1A                      : F2        : power  :                   : 2.5V    : 1A        :                
+VCCIO1A                      : F2        : power  :                   : 3.3V    : 1A        :                
 GND                          : F3        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 1B        :                
 altera_reserved_tdi          : F5        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
