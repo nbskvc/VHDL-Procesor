@@ -16,12 +16,22 @@ architecture Behavioral of ALU is
 begin
     process(i_reg_a, i_bus, i_alu_sel)
     begin
-        case i_alu_sel is
-            when "0000" => o_res <= i_bus;         
-            when "0001" => o_res <= i_bus;         
-            when "0010" => o_res <= i_reg_a + i_bus;       
-            when "0011" => o_res <= i_reg_a - i_bus;        
-            when others => o_res <= (others => '0');
-        end case;
+		if(i_alu_sel = "0000")then
+			o_res <= i_bus;
+		elsif(i_alu_sel = "0001")then
+			o_res <= i_bus;
+		elsif(i_alu_sel = "0010")then
+			o_res <= i_reg_a + i_bus;
+		elsif(i_alu_sel = "0011")then
+			o_res <= i_reg_a - i_bus;
+		elsif(i_alu_sel = "0111")then
+			if(i_reg_a = i_bus)then
+				o_res <= (others => '1');
+			else
+				o_res <= (others => '0');
+			end if;
+		else
+			o_res <= (others => '0');
+		end if;
     end process;
 end Behavioral;

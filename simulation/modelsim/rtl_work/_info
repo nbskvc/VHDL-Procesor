@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Korisnik/Desktop/lprs_procesor_v2/simulation/modelsim
 Ealu
-Z1 w1737485949
+Z1 w1737935357
 Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -23,9 +23,9 @@ V_43Ik`<@8fz7K9:]5`gi00
 !s100 ]]_DAWMBjRB_CkA=40Y;D0
 Z8 OV;C;10.5b;63
 31
-Z9 !s110 1737699014
+Z9 !s110 1737941171
 !i10b 1
-Z10 !s108 1737699014.000000
+Z10 !s108 1737941171.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/ALU.vhd|
 Z12 !s107 C:/Users/Korisnik/Desktop/lprs_procesor_v2/ALU.vhd|
 !i113 1
@@ -39,8 +39,8 @@ R5
 Z15 DEx4 work 3 alu 0 22 _43Ik`<@8fz7K9:]5`gi00
 l16
 L15
-V@43@`gcC;ZV1a>^UbS2je1
-!s100 `ehU00om`2?9A>ka7[YMi3
+VUnOD6[HII`eadWOLnFNNQ2
+!s100 0Zz^>ooIR:HB2G8R6W5aK1
 R8
 31
 R9
@@ -52,7 +52,7 @@ R12
 R13
 R14
 Econtrol_unit
-Z16 w1737694109
+Z16 w1737939184
 R2
 R3
 R4
@@ -62,8 +62,8 @@ Z17 8C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd
 Z18 FC:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd
 l0
 L6
-VIAhWP43kB3;79=YYPBQWl2
-!s100 Y7TWAf1>oj>8RY<XRY?P20
+VkHWG_NTLSJbK32Z^@6kCD2
+!s100 Fmc>>nldS^_mMmo[6]jA:0
 R8
 31
 R9
@@ -79,11 +79,11 @@ R2
 R3
 R4
 R5
-Z21 DEx4 work 12 control_unit 0 22 IAhWP43kB3;79=YYPBQWl2
-l31
-L25
-VGSW4FKQ^NgK>bOhBk1T;C0
-!s100 :QCD=7kE0fXnRk`K4[;PY1
+Z21 DEx4 work 12 control_unit 0 22 kHWG_NTLSJbK32Z^@6kCD2
+l32
+L26
+VlIfn;VlcL?nbdd6EZ5^Q]1
+!s100 mCc^U?];<[Q_<gHb`PQ8c2
 R8
 31
 R9
@@ -152,50 +152,50 @@ VX?24jTb6KBMeF?5>]>6F<3
 !s100 G^[b:7Q_E8AbW=`:Lc@>@0
 R8
 31
-Z32 !s110 1737699015
+R9
 !i10b 1
 R10
-Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/decoder3to8.vhd|
-Z34 !s107 C:/Users/Korisnik/Desktop/lprs_procesor_v2/decoder3to8.vhd|
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/decoder3to8.vhd|
+Z33 !s107 C:/Users/Korisnik/Desktop/lprs_procesor_v2/decoder3to8.vhd|
 !i113 1
 R13
 R14
 Abehavioral
 R4
 R5
-Z35 DEx4 work 11 decoder3to8 0 22 X?24jTb6KBMeF?5>]>6F<3
+Z34 DEx4 work 11 decoder3to8 0 22 X?24jTb6KBMeF?5>]>6F<3
 l13
 L12
 VVEOCk1dF>jBIMbV4g[KaK0
 !s100 cbF^EoRj0VIZPgg2?@;Xo1
 R8
 31
-R32
+R9
 !i10b 1
 R10
+R32
 R33
-R34
 !i113 1
 R13
 R14
 Elprs_processor
-Z36 w1737489318
+Z35 w1737939134
 R2
 R3
 R4
 R5
 R0
-Z37 8C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd
-Z38 FC:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd
+Z36 8C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd
+Z37 FC:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd
 l0
 L6
 Vc;UBzHNGo:DP0YdA]TYFD2
 !s100 JaYKFJPgnSWlVQ[@79bOD2
 R8
 31
-R32
+Z38 !s110 1737941172
 !i10b 1
-Z39 !s108 1737699015.000000
+Z39 !s108 1737941172.000000
 Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd|
 Z41 !s107 C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd|
 !i113 1
@@ -206,7 +206,7 @@ R23
 Z42 DEx4 work 15 program_counter 0 22 aPX=ng9`O5TV0^`?4kfnX0
 Z43 DEx4 work 11 multiplexer 0 22 Y;YHVaO8XbD_H2YUNSeA>1
 R15
-R35
+R34
 R21
 Z44 DEx4 work 13 nbit_register 0 22 d6KFcBl48WWg[ibHZZ;`J2
 R2
@@ -216,11 +216,11 @@ R5
 Z45 DEx4 work 14 lprs_processor 0 22 c;UBzHNGo:DP0YdA]TYFD2
 l48
 L24
-VE>Y3]]3K?@0g?1FkiomaX2
-!s100 4lQAhP2mQCak;jk=2cjQ11
+VSmI;^?IE5gkc1[fh59<AM1
+!s100 Fzeg^CaQ4RPe7][m0zFA71
 R8
 31
-R32
+R38
 !i10b 1
 R39
 R40
@@ -242,9 +242,9 @@ V^Bb75dD[Y4bF4:XNIKYeU2
 !s100 c1NcK5d`1WEfETA]]5_kg0
 R8
 31
-R32
+R9
 !i10b 1
-R39
+R10
 Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/memory.vhd|
 Z51 !s107 C:/Users/Korisnik/Desktop/lprs_procesor_v2/memory.vhd|
 !i113 1
@@ -261,9 +261,9 @@ Ve?MjTg^zF3K?cG[T0:]zb1
 !s100 :;z:Bd4>Rk=heXB7lZ62A0
 R8
 31
-R32
+R9
 !i10b 1
-R39
+R10
 R50
 R51
 !i113 1
@@ -282,9 +282,9 @@ VY;YHVaO8XbD_H2YUNSeA>1
 !s100 VGUgQW^ffBjEN4NHJTZdJ1
 R8
 31
-R32
+R38
 !i10b 1
-R39
+R10
 Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/multiplexer.vhd|
 Z57 !s107 C:/Users/Korisnik/Desktop/lprs_procesor_v2/multiplexer.vhd|
 !i113 1
@@ -300,9 +300,9 @@ VfVC2z5nW9_EIoZPVzHn?_3
 !s100 FmMEPfHjMaLlE4Ol0=0II3
 R8
 31
-R32
+R38
 !i10b 1
-R39
+R10
 R56
 R57
 !i113 1
@@ -323,7 +323,7 @@ Vd6KFcBl48WWg[ibHZZ;`J2
 !s100 cV@Vj9QSNg:=zo2LP0APk2
 R8
 31
-R32
+R38
 !i10b 1
 R39
 Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/nbit_register.vhd|
@@ -343,7 +343,7 @@ VJ[DfQiiK6f76I@6_YaO9V3
 !s100 e5zM=;?dd1E3_6SZ:<o=e0
 R8
 31
-R32
+R38
 !i10b 1
 R39
 R61
@@ -365,7 +365,7 @@ VaPX=ng9`O5TV0^`?4kfnX0
 !s100 nH?=[]_Y6]gRG05To81:h1
 R8
 31
-R32
+R38
 !i10b 1
 R39
 Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/program_counter.vhd|
@@ -384,7 +384,7 @@ V:EU0P@lXNdKT764kGdDCR3
 !s100 GaflOO6Z9N;Xj5[48:OMm2
 R8
 31
-R32
+R38
 !i10b 1
 R39
 R66
@@ -407,7 +407,7 @@ V]37n46X?39UG`_@U3F3J83
 !s100 oM1L`dNcdl4^nzAWD6]ZD3
 R8
 31
-R32
+R38
 !i10b 1
 R39
 Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/top.vhd|
@@ -432,7 +432,7 @@ VO3UZDi?7GehbXaj]ZOeCM2
 !s100 <X32lSQLPGl=Dl=BzgSfc1
 R8
 31
-R32
+R38
 !i10b 1
 R39
 R71
@@ -453,11 +453,11 @@ V>:FcnenBJ6>T58C0Z62J70
 !s100 jjIj6eA`bWKzAk6WmV0iP1
 R8
 31
-Z76 !s110 1737699016
+R38
 !i10b 1
 R39
-Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/top_tb.vhd|
-Z78 !s107 C:/Users/Korisnik/Desktop/lprs_procesor_v2/top_tb.vhd|
+Z76 !s90 -reportprogress|300|-93|-work|work|C:/Users/Korisnik/Desktop/lprs_procesor_v2/top_tb.vhd|
+Z77 !s107 C:/Users/Korisnik/Desktop/lprs_procesor_v2/top_tb.vhd|
 !i113 1
 R13
 R14
@@ -471,11 +471,11 @@ VE4Uc>DT277i3=e>0`ACQ?2
 !s100 h:Lzc9D;dg0eF40Y?5Kke3
 R8
 31
-R76
+R38
 !i10b 1
 R39
+R76
 R77
-R78
 !i113 1
 R13
 R14

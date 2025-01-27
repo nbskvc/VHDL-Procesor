@@ -185,7 +185,8 @@ control_unit: entity work.control_unit
 			  o_data_sel => s_data_sel,
 			  o_pc_clear => s_pc_clear,
 			  o_pc_en => s_pc_en,
-			  o_jmp_val => s_jmp_val
+			  o_jmp_val => s_jmp_val,
+			  i_eq_flag =>  sr_7(0)
 	);
 decoder: entity work.decoder3to8
 	port map(

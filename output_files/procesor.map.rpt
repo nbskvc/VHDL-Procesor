@@ -1,5 +1,5 @@
 Analysis & Synthesis report for procesor
-Fri Jan 24 07:17:46 2025
+Mon Jan 27 02:33:57 2025
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -37,16 +37,15 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  29. Parameter Settings for User Entity Instance: lprs_processor:processor|nbit_register:reg_g
  30. Parameter Settings for User Entity Instance: counter:select_digit
  31. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 32. Parameter Settings for Inferred Entity Instance: lprs_processor:processor|ALU:alu|lpm_add_sub:Add0
- 33. altsyncram Parameter Settings by Entity Instance
- 34. Port Connectivity Checks: "lprs_processor:processor|nbit_register:reg_instr"
- 35. Port Connectivity Checks: "lprs_processor:processor"
- 36. Port Connectivity Checks: "memory:mem"
- 37. Signal Tap Logic Analyzer Settings
- 38. Post-Synthesis Netlist Statistics for Top Partition
- 39. Elapsed Time Per Partition
- 40. Connections to In-System Debugging Instance "auto_signaltap_0"
- 41. Analysis & Synthesis Messages
+ 32. altsyncram Parameter Settings by Entity Instance
+ 33. Port Connectivity Checks: "lprs_processor:processor|nbit_register:reg_instr"
+ 34. Port Connectivity Checks: "lprs_processor:processor"
+ 35. Port Connectivity Checks: "memory:mem"
+ 36. Signal Tap Logic Analyzer Settings
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 40. Analysis & Synthesis Messages
 
 
 
@@ -72,13 +71,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 24 07:17:46 2025       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 27 02:33:57 2025       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; procesor                                    ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,075                                       ;
-;     Total combinational functions  ; 749                                         ;
+; Total logic elements               ; 1,136                                       ;
+;     Total combinational functions  ; 810                                         ;
 ;     Dedicated logic registers      ; 661                                         ;
 ; Total registers                    ; 661                                         ;
 ; Total pins                         ; 24                                          ;
@@ -190,8 +189,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -267,11 +265,6 @@ refer to the applicable agreement for further details.
 ; db/ip/sld0c5cb781/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/Korisnik/Desktop/lprs_procesor_v2/db/ip/sld0c5cb781/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
 ; db/ip/sld0c5cb781/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Korisnik/Desktop/lprs_procesor_v2/db/ip/sld0c5cb781/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                       ;             ;
-; lpm_add_sub.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.tdf                                        ;             ;
-; addcore.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/addcore.inc                                            ;             ;
-; look_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/look_add.inc                                           ;             ;
-; alt_stratix_add_sub.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                ;             ;
-; db/add_sub_hai.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Korisnik/Desktop/lprs_procesor_v2/db/add_sub_hai.tdf                                                 ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -280,16 +273,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,075     ;
+; Estimated Total logic elements              ; 1,136     ;
 ;                                             ;           ;
-; Total combinational functions               ; 749       ;
+; Total combinational functions               ; 810       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 370       ;
-;     -- 3 input functions                    ; 183       ;
-;     -- <=2 input functions                  ; 196       ;
+;     -- 4 input functions                    ; 399       ;
+;     -- 3 input functions                    ; 216       ;
+;     -- <=2 input functions                  ; 195       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 619       ;
+;     -- normal mode                          ; 680       ;
 ;     -- arithmetic mode                      ; 130       ;
 ;                                             ;           ;
 ; Total registers                             ; 661       ;
@@ -303,8 +296,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 386       ;
-; Total fan-out                               ; 4817      ;
-; Average fan-out                             ; 3.24      ;
+; Total fan-out                               ; 4982      ;
+; Average fan-out                             ; 3.22      ;
 +---------------------------------------------+-----------+
 
 
@@ -313,15 +306,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 749 (28)            ; 661 (0)                   ; 1184        ; 0          ; 0            ; 0       ; 0         ; 24   ; 0            ; 0          ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+; |top                                                                                                                                    ; 810 (28)            ; 661 (0)                   ; 1184        ; 0          ; 0            ; 0       ; 0         ; 24   ; 0            ; 0          ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
 ;    |counter:select_digit|                                                                                                               ; 27 (27)             ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|counter:select_digit                                                                                                                                                                                                                                                                                                                       ; counter                           ; work         ;
-;    |lprs_processor:processor|                                                                                                           ; 253 (0)             ; 190 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor                                                                                                                                                                                                                                                                                                                   ; lprs_processor                    ; work         ;
-;       |ALU:alu|                                                                                                                         ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|ALU:alu                                                                                                                                                                                                                                                                                                           ; ALU                               ; work         ;
-;          |lpm_add_sub:Add0|                                                                                                             ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|ALU:alu|lpm_add_sub:Add0                                                                                                                                                                                                                                                                                          ; lpm_add_sub                       ; work         ;
-;             |add_sub_hai:auto_generated|                                                                                                ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|ALU:alu|lpm_add_sub:Add0|add_sub_hai:auto_generated                                                                                                                                                                                                                                                               ; add_sub_hai                       ; work         ;
-;       |control_unit:control_unit|                                                                                                       ; 31 (31)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|control_unit:control_unit                                                                                                                                                                                                                                                                                         ; control_unit                      ; work         ;
+;    |lprs_processor:processor|                                                                                                           ; 314 (0)             ; 190 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor                                                                                                                                                                                                                                                                                                                   ; lprs_processor                    ; work         ;
+;       |ALU:alu|                                                                                                                         ; 90 (90)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|ALU:alu                                                                                                                                                                                                                                                                                                           ; ALU                               ; work         ;
+;       |control_unit:control_unit|                                                                                                       ; 35 (35)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|control_unit:control_unit                                                                                                                                                                                                                                                                                         ; control_unit                      ; work         ;
 ;       |decoder3to8:decoder|                                                                                                             ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|decoder3to8:decoder                                                                                                                                                                                                                                                                                               ; decoder3to8                       ; work         ;
-;       |multiplexer:mux|                                                                                                                 ; 101 (101)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|multiplexer:mux                                                                                                                                                                                                                                                                                                   ; multiplexer                       ; work         ;
+;       |multiplexer:mux|                                                                                                                 ; 100 (100)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|multiplexer:mux                                                                                                                                                                                                                                                                                                   ; multiplexer                       ; work         ;
 ;       |nbit_register:reg_0|                                                                                                             ; 1 (1)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_0                                                                                                                                                                                                                                                                                               ; nbit_register                     ; work         ;
 ;       |nbit_register:reg_1|                                                                                                             ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_1                                                                                                                                                                                                                                                                                               ; nbit_register                     ; work         ;
 ;       |nbit_register:reg_2|                                                                                                             ; 1 (1)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_2                                                                                                                                                                                                                                                                                               ; nbit_register                     ; work         ;
@@ -331,9 +322,9 @@ refer to the applicable agreement for further details.
 ;       |nbit_register:reg_6|                                                                                                             ; 1 (1)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_6                                                                                                                                                                                                                                                                                               ; nbit_register                     ; work         ;
 ;       |nbit_register:reg_7|                                                                                                             ; 1 (1)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_7                                                                                                                                                                                                                                                                                               ; nbit_register                     ; work         ;
 ;       |nbit_register:reg_a|                                                                                                             ; 1 (1)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_a                                                                                                                                                                                                                                                                                               ; nbit_register                     ; work         ;
-;       |nbit_register:reg_g|                                                                                                             ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_g                                                                                                                                                                                                                                                                                               ; nbit_register                     ; work         ;
+;       |nbit_register:reg_g|                                                                                                             ; 1 (1)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_g                                                                                                                                                                                                                                                                                               ; nbit_register                     ; work         ;
 ;       |nbit_register:reg_instr|                                                                                                         ; 10 (10)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|nbit_register:reg_instr                                                                                                                                                                                                                                                                                           ; nbit_register                     ; work         ;
-;       |program_counter:pc|                                                                                                              ; 43 (43)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|program_counter:pc                                                                                                                                                                                                                                                                                                ; program_counter                   ; work         ;
+;       |program_counter:pc|                                                                                                              ; 44 (44)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lprs_processor:processor|program_counter:pc                                                                                                                                                                                                                                                                                                ; program_counter                   ; work         ;
 ;    |memory:mem|                                                                                                                         ; 0 (0)               ; 0 (0)                     ; 160         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|memory:mem                                                                                                                                                                                                                                                                                                                                 ; memory                            ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 160         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|memory:mem|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
 ;          |altsyncram_7lq3:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 160         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|memory:mem|altsyncram:altsyncram_component|altsyncram_7lq3:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_7lq3                   ; work         ;
@@ -446,8 +437,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 661   ;
-; Number of registers using Synchronous Clear  ; 64    ;
-; Number of registers using Synchronous Load   ; 77    ;
+; Number of registers using Synchronous Clear  ; 48    ;
+; Number of registers using Synchronous Load   ; 61    ;
 ; Number of registers using Asynchronous Clear ; 195   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 468   ;
@@ -479,20 +470,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_0|reg_data[8]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_0|reg_data[6]     ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_1|reg_data[15]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_2|reg_data[0]     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_3|reg_data[15]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_4|reg_data[12]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_5|reg_data[12]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_6|reg_data[5]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_2|reg_data[5]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_3|reg_data[0]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_4|reg_data[2]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_5|reg_data[11]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_6|reg_data[2]     ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_7|reg_data[10]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_a|reg_data[13]    ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_g|reg_data[0]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_a|reg_data[11]    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |top|lprs_processor:processor|nbit_register:reg_g|reg_data[12]    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|digit[3]                                                     ;
-; 10:1               ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |top|lprs_processor:processor|multiplexer:mux|o_bus[11]           ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; No         ; |top|lprs_processor:processor|program_counter:pc|Add0             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top|lprs_processor:processor|control_unit:control_unit|Selector1 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|lprs_processor:processor|control_unit:control_unit|o_alu_sel ;
+; 10:1               ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |top|lprs_processor:processor|multiplexer:mux|o_bus[3]            ;
 ; 11:1               ; 3 bits    ; 21 LEs        ; 6 LEs                ; 15 LEs                 ; No         ; |top|lprs_processor:processor|control_unit:control_unit|Selector7 ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; No         ; |top|lprs_processor:processor|program_counter:pc|Add0             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
@@ -773,34 +766,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lprs_processor:processor|ALU:alu|lpm_add_sub:Add0 ;
-+------------------------+-------------+-------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                        ;
-+------------------------+-------------+-------------------------------------------------------------+
-; LPM_WIDTH              ; 16          ; Untyped                                                     ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                     ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                     ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                     ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                     ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                     ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                     ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                     ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                          ;
-; DEVICE_FAMILY          ; MAX 10      ; Untyped                                                     ;
-; USE_WYS                ; OFF         ; Untyped                                                     ;
-; STYLE                  ; FAST        ; Untyped                                                     ;
-; CBXI_PARAMETER         ; add_sub_hai ; Untyped                                                     ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
-+------------------------+-------------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +----------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                       ;
 +-------------------------------------------+--------------------------------------------+
@@ -871,24 +836,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 24                          ;
 ; cycloneiii_ff         ; 204                         ;
 ;     CLR               ; 18                          ;
-;     ENA               ; 144                         ;
+;     ENA               ; 160                         ;
 ;     ENA CLR           ; 16                          ;
-;     ENA SCLR SLD      ; 16                          ;
 ;     plain             ; 10                          ;
-; cycloneiii_lcell_comb ; 311                         ;
+; cycloneiii_lcell_comb ; 372                         ;
 ;     arith             ; 59                          ;
 ;         2 data inputs ; 27                          ;
 ;         3 data inputs ; 32                          ;
-;     normal            ; 252                         ;
+;     normal            ; 313                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 38                          ;
-;         3 data inputs ; 26                          ;
-;         4 data inputs ; 182                         ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 59                          ;
+;         4 data inputs ; 211                         ;
 ; cycloneiii_ram_block  ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.20                       ;
-; Average LUT depth     ; 6.11                        ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 7.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -964,7 +928,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Jan 24 07:17:01 2025
+    Info: Processing started: Mon Jan 27 02:33:27 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off procesor -c procesor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -972,7 +936,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: ALU-Behavioral File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/ALU.vhd Line: 15
     Info (12023): Found entity 1: ALU File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/ALU.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file control_unit.vhd
-    Info (12022): Found design unit 1: control_unit-Behavioral File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 25
+    Info (12022): Found design unit 1: control_unit-Behavioral File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 26
     Info (12023): Found entity 1: control_unit File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
     Info (12022): Found design unit 1: counter-Behavioral File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/counter.vhd Line: 16
@@ -1064,17 +1028,18 @@ Info (12128): Elaborating entity "lprs_processor" for hierarchy "lprs_processor:
 Info (12128): Elaborating entity "nbit_register" for hierarchy "lprs_processor:processor|nbit_register:reg_instr" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 50
 Info (12128): Elaborating entity "nbit_register" for hierarchy "lprs_processor:processor|nbit_register:reg_0" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 61
 Info (12128): Elaborating entity "control_unit" for hierarchy "lprs_processor:processor|control_unit:control_unit" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 172
-Warning (10036): Verilog HDL or VHDL warning at control_unit.vhd(29): object "test" assigned a value but never read File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at control_unit.vhd(39): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 39
-Warning (10492): VHDL Process Statement warning at control_unit.vhd(58): signal "i_run" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 58
-Warning (10631): VHDL Process Statement warning at control_unit.vhd(44): inferring latch(es) for signal or variable "o_reg_in", which holds its previous value in one or more paths through the process File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 44
-Info (10041): Inferred latch for "o_reg_in[0]" at control_unit.vhd(44) File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 44
-Info (10041): Inferred latch for "o_reg_in[1]" at control_unit.vhd(44) File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 44
-Info (10041): Inferred latch for "o_reg_in[2]" at control_unit.vhd(44) File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 44
-Info (12128): Elaborating entity "decoder3to8" for hierarchy "lprs_processor:processor|decoder3to8:decoder" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 190
-Info (12128): Elaborating entity "ALU" for hierarchy "lprs_processor:processor|ALU:alu" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 196
-Info (12128): Elaborating entity "multiplexer" for hierarchy "lprs_processor:processor|multiplexer:mux" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 203
-Info (12128): Elaborating entity "program_counter" for hierarchy "lprs_processor:processor|program_counter:pc" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 221
+Warning (10036): Verilog HDL or VHDL warning at control_unit.vhd(30): object "test" assigned a value but never read File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at control_unit.vhd(40): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at control_unit.vhd(59): signal "i_run" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at control_unit.vhd(65): signal "i_eq_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 65
+Warning (10631): VHDL Process Statement warning at control_unit.vhd(45): inferring latch(es) for signal or variable "o_reg_in", which holds its previous value in one or more paths through the process File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 45
+Info (10041): Inferred latch for "o_reg_in[0]" at control_unit.vhd(45) File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 45
+Info (10041): Inferred latch for "o_reg_in[1]" at control_unit.vhd(45) File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 45
+Info (10041): Inferred latch for "o_reg_in[2]" at control_unit.vhd(45) File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 45
+Info (12128): Elaborating entity "decoder3to8" for hierarchy "lprs_processor:processor|decoder3to8:decoder" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 191
+Info (12128): Elaborating entity "ALU" for hierarchy "lprs_processor:processor|ALU:alu" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 197
+Info (12128): Elaborating entity "multiplexer" for hierarchy "lprs_processor:processor|multiplexer:mux" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 204
+Info (12128): Elaborating entity "program_counter" for hierarchy "lprs_processor:processor|program_counter:pc" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/lprs_processor.vhd Line: 222
 Info (12128): Elaborating entity "counter" for hierarchy "counter:select_digit" File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/top.vhd Line: 91
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_sc14.tdf
     Info (12023): Found entity 1: altsyncram_sc14 File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/db/altsyncram_sc14.tdf Line: 27
@@ -1096,7 +1061,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/db/cmpr_drb.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.01.24.07:17:30 Progress: Loading sld0c5cb781/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.01.27.02:33:45 Progress: Loading sld0c5cb781/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1119,16 +1084,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/db/ip/sld0c5cb781/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld0c5cb781/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/db/ip/sld0c5cb781/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "lprs_processor:processor|ALU:alu|Add0" File: c:/intelfpga_lite/18.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
-Info (12130): Elaborated megafunction instantiation "lprs_processor:processor|ALU:alu|lpm_add_sub:Add0" File: c:/intelfpga_lite/18.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
-Info (12133): Instantiated megafunction "lprs_processor:processor|ALU:alu|lpm_add_sub:Add0" with the following parameter: File: c:/intelfpga_lite/18.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
-    Info (12134): Parameter "LPM_WIDTH" = "16"
-    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_hai.tdf
-    Info (12023): Found entity 1: add_sub_hai File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/db/add_sub_hai.tdf Line: 22
+Warning (13012): Latch lprs_processor:processor|control_unit:control_unit|o_reg_in[2] has unsafe behavior File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 45
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal lprs_processor:processor|control_unit:control_unit|state.WB File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 28
+Warning (13012): Latch lprs_processor:processor|control_unit:control_unit|o_reg_in[0] has unsafe behavior File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 45
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal lprs_processor:processor|control_unit:control_unit|state.WB File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 28
+Warning (13012): Latch lprs_processor:processor|control_unit:control_unit|o_reg_in[1] has unsafe behavior File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 45
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal lprs_processor:processor|control_unit:control_unit|state.WB File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/control_unit.vhd Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_mux_row_or_digit[2]" is stuck at GND File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/top.vhd Line: 23
     Warning (13410): Pin "o_mux_sel_color_or_7segm[0]" is stuck at VCC File: C:/Users/Korisnik/Desktop/lprs_procesor_v2/top.vhd Line: 25
@@ -1137,15 +1098,15 @@ Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 49 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1152 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1213 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 1105 logic cells
+    Info (21061): Implemented 1166 logic cells
     Info (21064): Implemented 18 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Fri Jan 24 07:17:46 2025
-    Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:01:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Mon Jan 27 02:33:57 2025
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:51
 
 

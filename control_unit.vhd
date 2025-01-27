@@ -18,7 +18,8 @@ entity control_unit is
 			  o_data_sel : out STD_LOGIC;
 			  o_pc_clear : out STD_LOGIC;
 			  o_pc_en : out STD_LOGIC;
-			  o_jmp_val : out std_logic_vector(5 downto 0)
+			  o_jmp_val : out std_logic_vector(5 downto 0);
+			  i_eq_flag : in std_logic
 			  );
 end control_unit;
 
@@ -60,6 +61,10 @@ begin
 					o_pc_en <= '1';
 					if(i_inst(9 downto 6) = "0100")then  --jmp
 						o_jmp_val <= i_inst(5 downto 0);
+					elsif(i_inst(9 downto 6) = "0101")then
+						if(i_eq_flag = '1')then
+							o_jmp_val <= i_inst(5 downto 0);
+						end if;
 					end if;
 				else
 					next_state <= Fetch;
@@ -84,8 +89,10 @@ begin
 				test <= "0111";
 					o_reg_sel <= i_inst(5 downto 3);
 					o_acc_we <= '1';
-				elsif(i_inst(9 downto 6) = "0100")then
-					
+				elsif(i_inst(9 downto 6) = "0111")then --cmp
+					o_reg_sel <= i_inst(5 downto 3);  --rx out
+					o_acc_we <= '1'; --write rx to A reg
+					o_alu_sel <= "0111"; --select cmp
 				end if;
 				next_state <= EX;
 			when EX =>
@@ -104,6 +111,11 @@ begin
 					o_reg_sel <= i_inst(2 downto 0);
 					o_alu_sel <= "0011";
 					test <= "0011";
+				elsif(i_inst(9 downto 6) = "0111")then
+					test <= "0010";
+					o_result_we <= '1';
+					o_reg_sel <= i_inst(2 downto 0); --ry out
+					o_alu_sel <= "0111"; --select cmp
 				else
 					test <= "1111";
 				end if;
@@ -119,6 +131,10 @@ begin
 					o_g_sel <= '1';
 				elsif(i_inst(9 downto 6) = "0011")then --sub
 					o_reg_in <= i_inst(5 downto 3);
+					o_reg_en <= '1';
+					o_g_sel <= '1';
+				elsif(i_inst(9 downto 6) = "0111")then
+					o_reg_in <= "111";
 					o_reg_en <= '1';
 					o_g_sel <= '1';
 				end if;
