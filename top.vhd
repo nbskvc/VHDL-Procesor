@@ -102,7 +102,7 @@ select_digit: entity work.counter
 --s_data(7 downto 0) <= i_sw;
 --s_data(15 downto 8) <= i_sw;
 
-s_data <= x"0003";
+s_data <= x"00"&i_sw;
 
 digit_1 <= sreg(3 downto 0);
 digit_2 <= sreg(7 downto 4); 
